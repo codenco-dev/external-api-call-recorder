@@ -16,7 +16,10 @@ class ExternalApiCallRecorderServiceProvider extends ServiceProvider
          */
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'external-api-call-recorder');
         // $this->loadViewsFrom(__DIR__.'/../resources/views', 'external-api-call-recorder');
-        // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->app->make('Illuminate\Database\Eloquent\Factory')
+            ->load(__DIR__.'/../database/factories');
+
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         if ($this->app->runningInConsole()) {
