@@ -1,0 +1,54 @@
+{
+    "name": "codenco-dev/external-api-call-recorder",
+    "description": "This package allows to record each call of external API, with payload in and payload out, to check the lasted call.",
+    "keywords": [
+        "codenco-dev",
+        "external-api-call-recorder"
+    ],
+    "homepage": "https://github.com/codenco-dev/external-api-call-recorder",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Dominic THOMAS",
+            "email": "dthomas@codenco.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CodencoDev\\ExternalApiCallRecorder\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CodencoDev\\ExternalApiCallRecorder\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CodencoDev\\ExternalApiCallRecorder\\ExternalApiCallRecorderServiceProvider"
+            ],
+            "aliases": {
+                "ExternalApiCallRecorder": "CodencoDev\\ExternalApiCallRecorder\\ExternalApiCallRecorderFacade"
+            }
+        }
+    }
+}
