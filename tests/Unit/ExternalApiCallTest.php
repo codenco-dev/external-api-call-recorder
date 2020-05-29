@@ -30,7 +30,7 @@ class ExternalApiCallTest extends TestCase
                 'id', 'created_at', 'updated_at', 'sent_payload', 'received_payload', 'path', 'body', 'return', 'token','status',
             ])
             ->assertCanFillables(['sent_payload', 'sent_payload', 'path', 'body', 'return', 'token'])
-//            ->assertHasBelongsToRelation(ExternalApi::class)
+            ->assertHasBelongsToRelation(ExternalApi::class)
         ;
     }
 
