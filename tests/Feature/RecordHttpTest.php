@@ -12,8 +12,8 @@ class RecordHttpTest extends TestCase
 {
     use HasModelTestor,RefreshDatabase;
 
-
-    public function test_it_can_record_request()
+    /** @notest */
+    public function it_can_record_request()
     {
         $result = Http::get('https://www.google.fr');
         dd($result);
