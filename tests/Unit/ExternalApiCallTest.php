@@ -3,7 +3,6 @@
 
 namespace CodencoDev\ExternalApiCallRecorder\Tests\Unit;
 
-
 use CodencoDev\ExternalApiCallRecorder\Models\ExternalApi;
 use CodencoDev\ExternalApiCallRecorder\Models\ExternalApiCall;
 use CodencoDev\ExternalApiCallRecorder\Tests\TestCase;
@@ -33,5 +32,4 @@ class ExternalApiCallTest extends TestCase
             ->assertHasBelongsToRelation(ExternalApi::class)
         ;
     }
-
 }

@@ -3,9 +3,6 @@
 
 namespace CodencoDev\ExternalApiCallRecorder\Tests\Unit;
 
-
-use CodencoDev\ExternalApiCallRecorder\Models\ExternalApi;
-use CodencoDev\ExternalApiCallRecorder\Models\ExternalApiCall;
 use CodencoDev\ExternalApiCallRecorder\Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Http;
@@ -21,6 +18,4 @@ class RecordHttpTest extends TestCase
         $result = Http::get('https://www.google.fr');
         dd($result);
     }
-
-
 }

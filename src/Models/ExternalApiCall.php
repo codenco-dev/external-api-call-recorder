@@ -4,7 +4,6 @@ namespace CodencoDev\ExternalApiCallRecorder\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class ExternalApiCall extends Model
 {
@@ -16,7 +15,7 @@ class ExternalApiCall extends Model
         'return',
         'token',
         'status',
-        'external_api_id'
+        'external_api_id',
     ];
 
     protected $dates = [
@@ -28,5 +27,4 @@ class ExternalApiCall extends Model
     {
         return $this->belongsTo(ExternalApi::class);
     }
-
 }
