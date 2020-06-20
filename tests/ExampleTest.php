@@ -2,12 +2,11 @@
 
 namespace CodencoDev\ExternalApiCallRecorder\Tests;
 
-use Orchestra\Testbench\TestCase;
 use CodencoDev\ExternalApiCallRecorder\ExternalApiCallRecorderServiceProvider;
+use Orchestra\Testbench\TestCase;
 
 class ExampleTest extends TestCase
 {
-
     protected function getPackageProviders($app)
     {
         return [ExternalApiCallRecorderServiceProvider::class];

@@ -3,7 +3,6 @@
 
 namespace CodencoDev\ExternalApiCallRecorder\Tests;
 
-
 use CodencoDev\ExternalApiCallRecorder\ExternalApiCallRecorderServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
